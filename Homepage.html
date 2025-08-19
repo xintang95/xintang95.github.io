@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汤信 - 个人简历</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --light-gray: #ecf0f1;
+            --border-color: #bdc3c7;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header-main {
+            flex-grow: 1;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .basic-info {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 5px 20px;
+            color: #555;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid var(--light-gray);
+            border-radius: 5px;
+            margin-left: 30px;
+        }
+        
+        .contact-info {
+             margin-top: 20px;
+             color: #555;
+        }
+        
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 .icon {
+            margin-right: 12px;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+
+        .section-item {
+            margin-bottom: 20px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .item-date {
+            color: #777;
+            font-size: 0.9em;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+        
+        .item-content {
+            margin-top: 5px;
+            padding-left: 20px;
+            border-left: 3px solid var(--light-gray);
+        }
+        
+        .item-content p {
+            margin: 5px 0;
+            color: #444;
+        }
+
+        .project-role {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .project-details {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .publications ol {
+            padding-left: 20px;
+        }
+        .publications li {
+            margin-bottom: 15px;
+        }
+        .publications strong {
+            color: var(--primary-color);
+        }
+        .publications .journal-info {
+            font-style: italic;
+            color: #555;
+        }
+        
+        .skills-list {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        .skills-list li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="%233498db"><path d="M21 12l-18 12v-24z"/></svg>') no-repeat left center;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 15px;
+            }
+            header {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-pic {
+                margin-left: 0;
+                margin-bottom: 20px;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-date {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-main">
+                <h1>汤 信</h1>
+                <div class="basic-info">
+                    <span><strong>出生年月:</strong> 1995.10</span>
+                    <span><strong>政治面貌:</strong> 群众</span>
+                    <span><strong>户籍:</strong> 上海市</span>
+                    <span><strong>毕业院校:</strong> 东华大学 (211, 双一流)</span>
+                    <span><strong>学位:</strong> 博士</span>
+                </div>
+                <div class="contact-info">
+                    <span>📞 <strong>电话:</strong> 18521511477</span><br>
+                    <span>📧 <strong>邮箱:</strong> <a href="mailto:tangxin@sues.edu.cn">tangxin@sues.edu.cn</a></span>
+                </div>
+            </div>
+            <!-- TODO: 将 '...' 替换为您的真实照片路径 -->
+            <img src="https://via.placeholder.com/120x150/cccccc/ffffff?text=PHOTO" alt="汤信" class="profile-pic">
+        </header>
+
+        <main>
+            <section>
+                <h2><span class="icon">🎓</span>工作 / 教育经历</h2>
+                <div class="section-item">
+                    <div class="item-header">
+                        <span class="item-title">上海工程技术大学</span>
+                        <span class="item-date">2024.06 - 至今</span>
+                    </div>
+                    <div class="item-content">
+                        <p><strong>职位:</strong> 教师 / 讲师</p>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-header">
+                        <span class="item-title">东华大学</span>
+                        <span class="item-date">2018.09 - 2024.03</span>
+                    </div>
+                    <div class="item-content">
+                        <p><strong>专业:</strong> 控制科学与工程 (硕博连读)</p>
+                        <p><strong>研究方向:</strong> 干涉计量、光学超精密检测、数字图像处理、半导体前道工艺过程量测设备 (C++编程、专业相关算法)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2><span class="icon">📈</span>纵向课题经历</h2>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">超高温环境下散斑多物理场耦合演化与三维形变动态检测方法研究</span><span class="project-role">主持</span></div>
+                    <p class="project-details">上海市自然科学基金项目 (25ZR1402180) | 2025.07-2028.06 | 25万 (在研)</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">动态加载条件下生物活性界面面内应变检测理论与方法研究</span><span class="project-role">主持</span></div>
+                    <p class="project-details">东华大学创新基金项目 (CUSF-DH-D2021057) | 2020.09-2023.12 | 10万 (已结题)</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">活性生物材料界面应变高精度传感器关键技术研究</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">上海市自然科学基金项目 (21ZR1402900) | 2021.07-2024.07 | 负责人: 钟平教授 (已结题)</p>
+                </div>
+                 <div class="section-item">
+                    <div class="item-header"><span class="item-title">动态加载条件下生物活性界面面内应变检测理论与方法研究</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">国家自然科学基金面上项目 (51975116) | 2020.01-2023.12 | 负责人: 钟平教授 (已结题)</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">非结构化环境下生物材料湿表面高分辨率应变检测理论方法</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">国家自然科学基金面上项目 (51575099) | 2016.01-2019.12 | 负责人: 钟平教授 (已结题)</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">大型薄壁构件高质量激光焊接技术集成与高可靠性装备研制</span><span class="project-role">参与</span></div>
+                    <p class="project-details">国家重点研发计划子课题 (2018YFB1107804) | 2018.08-2022.07 | 负责人: 张玲玲研究员 (已结题)</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="icon">💼</span>横向课题经历</h2>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">半导体晶圆多表面三维轮廓检测算法研究与开发</span><span class="project-role">项目负责人</span></div>
+                    <p class="project-details">茂莱(南京)仪器有限公司 | 2025.4-2026.3 | 60万</p>
+                </div>
+                 <div class="section-item">
+                    <div class="item-header"><span class="item-title">基于液晶空间光调制器的高精度激光干涉形貌检测系统</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">东华大学孵化项目 | 2020.9-2021.3</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">大口径半导体衬底、晶圆多表面形貌检测系统设计</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">法博思(宁波)半导体设备有限公司 | 2024.01-2027.03</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">半导体晶圆吸盘形貌检测关键技术开发</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">上海乾曜光学科技有限公司 | 2023.9-2025.3</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">激光干涉检测仪控制与分析系统</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">苏州然玫光电科技有限公司 | 2022.9-2024.4</p>
+                </div>
+                 <div class="section-item">
+                    <div class="item-header"><span class="item-title">干涉成像条纹计数系统及偏移校准算法研究</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">上海松铖光电科技有限公司 | 2022.5-2022.10</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">基于CSI技术的非球面3D测量仪</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">上海乾曜光学科技有限公司 | 2020.1-2022.12</p>
+                </div>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">卫星天线面板热形变面形误差检测系统及算法研究</span><span class="project-role">主要完成人</span></div>
+                    <p class="project-details">上海航天八院卫星装备研究所 | 2019.9-2020.11</p>
+                </div>
+            </section>
+
+            <section class="publications">
+                <h2><span class="icon">📚</span>学术成果</h2>
+                <h3><strong>截止目前以一作/通讯发表SCI论文10篇（SCI一区1篇、二区5篇、三区4篇，近三年IF>50）、发明专利5项</strong></h3>
+                <ol>
+                    <li><strong>Xin Tang*</strong>, Xinli Zheng, Jie Chen, et al. Modeling Uncertainty in Deep Learning for Focus Prediction of Defocused Images. <span class="journal-info">Journal of Lightwave Technology, 2025. (JCR Q1, 中科院一区 SCI)</span></li>
+                    <li>Yi Hou, Zhisong Li, <strong>Xin Tang*</strong>. Absolute detection method based on multi-signal phase extraction and separation. <span class="journal-info">Optics and Lasers in Engineering, 2025. (JCR Q1, 中科院二区 SCI)</span></li>
+                    <li>Fengyi Zhang, Zhisong Li, <strong>Xin Tang*</strong>. Interferometric image reorganization and screening method based on phase-shift convergence criterion. <span class="journal-info">Optics and Lasers in Engineering, 2025. (JCR Q1, 中科院二区 SCI)</span></li>
+                    <li><strong>Xin Tang</strong>, Jingfeng Zhu, Ping Zhong*, et al. Reliable wavefront reconstruction from a single lateral shearing interferogram using Bayesian convolutional neural network. <span class="journal-info">Optics and Lasers in Engineering, 2023. (JCR Q1, 中科院二区 SCI)</span></li>
+                    <li><strong>Xin Tang</strong>, Ping Zhong*, et al. Measurement of linear shear through optical vortices in digital shearing speckle pattern interferometry. <span class="journal-info">Optics Express, 2023. (JCR Q1, 中科院二区 SCI TOP)</span></li>
+                    <li><strong>Xin Tang</strong>; Ping Zhong*; et al. Numerical model for evaluating the speckle activity and characteristics of bone tissue under the biospeckle laser system. <span class="journal-info">Journal of Innovative Optical Health Sciences, 2021. (JCR Q2, 中科院三区 SCI)</span></li>
+                    <li><strong>Xin Tang</strong>, Ping Zhong, Zhisong Li, et al. Evaluation of biological speckle activity: Using variational mode decomposition. <span class="journal-info">Optik, 2021. (JCR Q2, 中科院三区 SCI)</span></li>
+                    <li>钟平, <strong>汤信</strong>, 李志松, 等. 一种数字散斑干涉系统光阑狭缝尺寸的选取方式. 2021.07.27, CN110500965B. (发明专利)</li>
+                    <li>张玲玲, <strong>汤信</strong>, 钟平, 等. 一种激光深熔焊缺陷的在线检测方法及检测装置. 2020.12.04, CN112025090A. (发明专利)</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2><span class="icon">🔬</span>研究方向</h2>
+                 <p>光电检测、干涉计量、散斑计量、半导体前道工艺检测、图像处理、应变检测、机器视觉、抗震隔振技术研究等。</p>
+            </section>
+            
+            <section>
+                <h2><span class="icon">🏆</span>奖项荣誉</h2>
+                <div class="section-item">
+                    <div class="item-header"><span class="item-title">获得荣誉 (共计3项)</span></div>
+                    <ul>
+                        <li><strong>2025年:</strong> 受聘为上海工程技术大学电子电气工程学院创新创业中心导师</li>
+                        <li><strong>2024年:</strong> 上海市优秀毕业生</li>
+                        <li><strong>2024年:</strong> 上海市科技进步奖二等奖: 纳米精度材料加工面型及形变干涉计量关键技术及其应用 (10/10)</li>
+                    </ul>
+                </div>
+                 <div class="section-item">
+                    <div class="item-header"><span class="item-title">指导学生竞赛获奖 (共计2项)</span></div>
+                    <ul>
+                        <li><strong>2024年:</strong> 中国国际大学生创新大赛 (上海赛区) - 铜奖 (指导教师)</li>
+                        <li><strong>2024年:</strong> 上海工程技术大学大学生创新大赛 - 一等奖 (指导教师)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                 <h2><span class="icon">🌟</span>个人评价</h2>
+                 <ul class="skills-list">
+                    <li><strong>学术/科研能力:</strong> 发表一作/通讯 SCI 论文 10 篇，发明专利 5 项，参加学术会议 3 次 (全英文口头报告 2 次)，主持/参与科研项目 10 余项；具备独立申报科研项目、进行学术研究的能力。</li>
+                    <li><strong>专业能力:</strong> 拥有良好的图像处理理论和实践基础，并掌握 C++、C#、Python 和 Matlab 等常用语言，能够独立从事编程项目的管理和开发；拥有扎实的光学干涉理论和实践基础，具备运用 Zemax 进行光学系统仿真和分析的能力；具有丰富的光学成像经验、光路调试、成像性能分析能力，能够独立从事机械、光电类产品的开发和设计。</li>
+                    <li><strong>职业技能:</strong> 具有很好的文本编辑、写作能力，多次申报国家自然基金、上海市自然基金等项目；精通 Office、Visio 等常见办公软件；拥有较强英文科技文献阅读能力，擅长专业英语写作；长期指导硕士研究生、本科生开展学术研究、学科竞赛和毕业论文，熟悉学术研究、教学、管理工作岗位。</li>
+                 </ul>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
