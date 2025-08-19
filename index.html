@@ -176,22 +176,26 @@
         /* Research Highlights Section */
         .highlight-item {
             display: flex;
-            gap: 30px;
+            gap: 40px; /* Increased gap */
             align-items: center;
             margin-bottom: 40px;
-            padding: 20px;
+            padding: 25px; /* Increased padding */
             background-color: var(--highlight-bg);
             border-radius: 8px;
         }
         .highlight-item:nth-child(even) {
             flex-direction: row-reverse;
         }
+        .highlight-image {
+            flex: 0 0 40%; /* Image container takes ~40% width */
+            max-width: 350px; /* Optional: max width for very large screens */
+        }
         .highlight-image img {
-            width: 220px;
+            width: 100%; /* Image fills its container */
             height: auto;
             border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            display: block;
         }
         .highlight-text { flex: 1; }
         .highlight-text h4 {
@@ -263,7 +267,9 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .highlight-image img { width: 100%; max-width: 250px; }
+            .highlight-image {
+                 max-width: 100%; /* Allow larger image on mobile */
+            }
         }
     </style>
 </head>
@@ -433,6 +439,7 @@
 
 </body>
 </html>
+
 
 
 
