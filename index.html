@@ -131,6 +131,23 @@
             color: var(--secondary-color);
         }
 
+        .back-to-top {
+            margin-left: auto; /* 关键：将元素推到 flex 容器的最右边 */
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 1.4em; /* 调整箭头大小 */
+            font-weight: bold;
+            line-height: 1;
+            padding: 0 8px;
+            border-radius: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+        }
+
         .section-item { margin-bottom: 25px; }
         .item-header {
             display: flex;
@@ -276,7 +293,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="top">
         <p class="welcome-message">Welcome to Xin Tang's Homepage!</p>
         
         <nav>
@@ -306,7 +323,7 @@
 
         <main>
             <section id="education">
-                <h2><span class="icon">🎓</span>教育与工作经历</h2>
+                <h2><span class="icon">🎓</span>教育与工作经历<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <div class="section-item">
                     <div class="item-header">
                         <span class="item-title">工作经历：上海工程技术大学</span>
@@ -327,7 +344,7 @@
             </section>
             
             <section id="projects">
-                <h2><span class="icon">📈</span>科研项目经历</h2>
+                <h2><span class="icon">📈</span>科研项目经历<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <div class="section-item">
                     <div class="item-header"><span class="item-title">超高温环境下散斑多物理场耦合演化与三维形变动态检测方法研究</span><span class="project-role">主持</span></div>
                     <p class="project-details">上海市自然科学基金项目 (25ZR1402180) | 2025.07 - 2028.06 | 25万 (在研)</p>
@@ -347,7 +364,7 @@
             </section>
             
             <section id="research-highlights">
-                <h2><span class="icon">💡</span>科研成果亮点</h2>
+                <h2><span class="icon">💡</span>科研成果亮点<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <div class="highlight-item">
                     <div class="highlight-image">
                         <img src="fig1.png" alt="深度学习焦点预测与不确定性建模">
@@ -378,7 +395,7 @@
             </section>
 
             <section id="publications" class="publications">
-                <h2><span class="icon">📚</span>代表性学术论著</h2>
+                <h2><span class="icon">📚</span>代表性学术论著<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <ol>
                     <li><strong>Xin Tang*</strong>, Xinli Zheng, Jie Chen, et al. Modeling Uncertainty in Deep Learning for Focus Prediction of Defocused Images. <span class="journal-info">Journal of Lightwave Technology, 2025. (JCR Q1, 中科院一区 SCI)</span></li>
                     <li>Yi Hou, Zhisong Li, <strong>Xin Tang*</strong>. Absolute detection method based on multi-signal phase extraction and separation. <span class="journal-info">Optics and Lasers in Engineering, 2025. (JCR Q1, 中科院二区 SCI)</span></li>
@@ -391,7 +408,7 @@
             </section>
 
             <section id="awards">
-                <h2><span class="icon">🏆</span>荣誉奖项</h2>
+                <h2><span class="icon">🏆</span>荣誉奖项<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <div class="section-item">
                     <div class="item-header"><span class="item-title">个人荣誉</span></div>
                      <ul class="skills-list" style="list-style: none;">
@@ -410,7 +427,7 @@
             </section>
             
             <section id="expertise">
-                <h2><span class="icon">🌟</span>核心专长</h2>
+                <h2><span class="icon">🌟</span>核心专长<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
                 <div class="section-item">
                      <h4>研究方向</h4>
                      <div class="keywords-container">
@@ -437,5 +454,6 @@
 
 </body>
 </html>
+
 
 
