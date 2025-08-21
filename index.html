@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>汤信 - 个人主页</title>
+    <title>Xin Tang - Homepage</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -130,24 +130,7 @@
             font-size: 1em;
             color: var(--secondary-color);
         }
-
-        .back-to-top {
-            margin-left: auto; /* 关键：将元素推到 flex 容器的最右边 */
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-size: 1.4em; /* 调整箭头大小 */
-            font-weight: bold;
-            line-height: 1;
-            padding: 0 8px;
-            border-radius: 5px;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--light-gray);
-            color: var(--primary-color);
-        }
-
+        
         .section-item { margin-bottom: 25px; }
         .item-header {
             display: flex;
@@ -190,13 +173,12 @@
             margin-top: 5px;
         }
 
-        /* Research Highlights Section (UPDATED) */
         .highlight-item {
             display: flex;
-            gap: 40px; /* Increased gap */
+            gap: 40px;
             align-items: center;
             margin-bottom: 40px;
-            padding: 25px; /* Increased padding */
+            padding: 25px;
             background-color: var(--highlight-bg);
             border-radius: 8px;
         }
@@ -204,11 +186,11 @@
             flex-direction: row-reverse;
         }
         .highlight-image {
-            flex: 0 0 40%; /* Image container takes ~40% width */
-            max-width: 350px; /* Optional: max width for very large screens */
+            flex: 0 0 40%;
+            max-width: 350px;
         }
         .highlight-image img {
-            width: 100%; /* Image fills its container */
+            width: 100%;
             height: auto;
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -226,21 +208,6 @@
             text-align: justify;
         }
 
-
-        /* Publications Section */
-        .publications ol {
-            padding-left: 25px;
-        }
-        .publications li {
-            margin-bottom: 18px;
-            padding-left: 10px;
-        }
-        .publications .journal-info {
-            font-style: italic;
-            color: #555;
-        }
-        
-        /* Research Direction Keywords */
         .keywords-container {
             display: flex;
             flex-wrap: wrap;
@@ -253,23 +220,6 @@
             border-radius: 15px;
             font-size: 0.9em;
             font-weight: 500;
-        }
-
-        .skills-list {
-            padding-left: 0;
-            list-style-type: none;
-        }
-        .skills-list li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .skills-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
         }
 
         @media (max-width: 768px) {
@@ -286,7 +236,7 @@
                 text-align: center;
             }
             .highlight-image {
-                 max-width: 100%; /* Allow larger image on mobile */
+                 max-width: 100%;
             }
         }
     </style>
@@ -297,165 +247,95 @@
         <p class="welcome-message">Welcome to Xin Tang's Homepage!</p>
         
         <nav>
-            <a href="#education">教育与工作</a>
-            <a href="#projects">科研项目</a>
-            <a href="#research-highlights">科研成果亮点</a>
-            <a href="#publications">学术论著</a>
-            <a href="#awards">荣誉奖项</a>
-            <a href="#expertise">核心专长</a>
+            <a href="#education">Education & Work</a>
+            <a href="#research-interests">Research Interests</a>
+            <a href="#research-highlights">Research Highlights</a>
         </nav>
 
         <header>
             <div class="header-main">
-                <h1>汤 信</h1>
+                <h1>Xin Tang</h1>
                 <div class="basic-info">
-                    <span><strong>研究领域:</strong> 光电检测 & 图像处理</span>
-                    <span><strong>当前任职:</strong> 上海工程技术大学 讲师</span>
+                    <span><strong>Research Field:</strong> Optoelectronic Detection & Image Processing</span>
+                    <span><strong>Current Position:</strong> Lecturer, School of Electronic and Electrical Engineering, Shanghai University of Engineering Science</span>
                 </div>
                 <div class="contact-info">
-                    <span>📞 <strong>电话:</strong> 18521511477</span><br>
-                    <span>📧 <strong>邮箱:</strong> <a href="mailto:tangxin@sues.edu.cn">tangxin@sues.edu.cn</a></span><br>
-                    <span>📍 <strong>通讯地址:</strong> 上海市松江区龙腾路333号</span>
+                    <span>📞 <strong>Phone:</strong> +86 18521511477</span><br>
+                    <span>📧 <strong>Email:</strong> <a href="mailto:tangxin@sues.edu.cn">tangxin@sues.edu.cn</a></span><br>
+                    <span>📍 <strong>Address:</strong> 333 Longteng Road, Songjiang District, Shanghai, China</span>
                 </div>
             </div>
-            <img src="profilephoto.jpg" alt="汤信" class="profile-pic">
+            <img src="profilephoto.jpg" alt="Xin Tang" class="profile-pic">
         </header>
 
         <main>
             <section id="education">
-                <h2><span class="icon">🎓</span>教育与工作经历<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
+                <h2><span class="icon">🎓</span>Education & Work Experience</h2>
                 <div class="section-item">
                     <div class="item-header">
-                        <span class="item-title">工作经历：上海工程技术大学</span>
-                        <span class="item-date">2024.06 - 至今</span>
+                        <span class="item-title">Shanghai University of Engineering Science</span>
+                        <span class="item-date">2024.06 - Present</span>
                     </div>
-                    <div class="item-content"><p><strong>职位:</strong> 教师 / 讲师</p></div>
+                    <div class="item-content"><p><strong>Position:</strong> Faculty / Lecturer</p></div>
                 </div>
                 <div class="section-item">
                     <div class="item-header">
-                        <span class="item-title">毕业院校：东华大学 (211, 双一流)</span>
+                        <span class="item-title">Donghua University (Project 211, Double First-Class)</span>
                         <span class="item-date">2018.09 - 2024.03</span>
                     </div>
                     <div class="item-content">
-                        <p><strong>专业:</strong> 控制科学与工程 (博士)</p>
-                        <p><strong>研究方向:</strong> 干涉计量、光学超精密检测、数字图像处理、半导体前道工艺过程量测设备 (C++编程、专业相关算法)</p>
+                        <p><strong>Major:</strong> Control Science and Engineering (Ph.D.)</p>
+                        <p><strong>Research Directions:</strong> Interferometry, Ultra-precision Optical Inspection, Digital Image Processing, Metrology Equipment for Semiconductor Front-End Processes (C++ Programming, Specialized Algorithms).</p>
                     </div>
                 </div>
             </section>
             
-            <section id="projects">
-                <h2><span class="icon">📈</span>科研项目经历<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
+            <section id="research-interests">
+                <h2><span class="icon">🌟</span>Research Interests</h2>
                 <div class="section-item">
-                    <div class="item-header"><span class="item-title">超高温环境下散斑多物理场耦合演化与三维形变动态检测方法研究</span><span class="project-role">主持</span></div>
-                    <p class="project-details">上海市自然科学基金项目 (25ZR1402180) | 2025.07 - 2028.06 | 25万 (在研)</p>
-                </div>
-                <div class="section-item">
-                    <div class="item-header"><span class="item-title">半导体晶圆多表面三维轮廓检测算法研究与开发</span><span class="project-role">项目负责人</span></div>
-                    <p class="project-details">横向课题 | 茂莱(南京)仪器有限公司 | 2025.4 - 2026.3 | 60万 (在研)</p>
-                </div>
-                <div class="section-item">
-                    <div class="item-header"><span class="item-title">动态加载条件下生物活性界面面内应变检测理论与方法研究</span><span class="project-role">主持</span></div>
-                    <p class="project-details">东华大学创新基金项目 (CUSF-DH-D2021057) | 2020.09 - 2023.12 | 10万 (已结题)</p>
-                </div>
-                <div class="section-item">
-                    <div class="item-header"><span class="item-title">活性生物材料界面应变高精度传感器关键技术研究</span><span class="project-role">主要完成人</span></div>
-                    <p class="project-details">上海市自然科学基金项目 | 2021.07 - 2024.07 | 负责人: 钟平教授 (已结题)</p>
+                     <div class="keywords-container">
+                         <span class="keyword">Optoelectronic Precision Measurement</span>
+                         <span class="keyword">Computational Imaging</span>
+                         <span class="keyword">Interferometry / Speckle Metrology</span>
+                         <span class="keyword">Semiconductor Process Metrology</span>
+                         <span class="keyword">Machine Vision</span>
+                         <span class="keyword">AI-Powered Optical Measurement</span>
+                     </div>
                 </div>
             </section>
             
             <section id="research-highlights">
-                <h2><span class="icon">💡</span>科研成果亮点<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
+                <h2><span class="icon">💡</span>Research Highlights</h2>
                 <div class="highlight-item">
                     <div class="highlight-image">
-                        <img src="fig1.png" alt="深度学习焦点预测与不确定性建模">
+                        <img src="fig1.png" alt="Focus Prediction and Uncertainty Modeling with Deep Learning">
                     </div>
                     <div class="highlight-text">
-                        <h4>深度学习赋能的焦点预测与不确定性建模</h4>
-                        <p>本研究提出了一种创新的深度学习框架，它不仅能精准预测离焦图像的焦点位置，更关键的是能够对预测结果进行不确定性量化。通过为模型的预测提供置信度评估，该技术极大地提升了自动化光学检测和成像系统的可靠性与鲁棒性，解决了传统方法在复杂或低信噪比场景下难以评估结果可靠性的痛点。</p>
-                    </div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-image">
-                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0143816622003347-gr14.jpg" alt="贝叶斯神经网络波前重构">
-                    </div>
-                    <div class="highlight-text">
-                        <h4>基于贝叶斯神经网络的单帧干涉波前重构</h4>
-                        <p>该研究利用贝叶斯卷积神经网络（BNN），成功实现了从单帧横向剪切干涉图中高精度、高可靠性地重构复杂波前。此方法将深度学习的强大拟合能力与贝叶斯理论的概率推理相结合，有效克服了传统方法对多帧数据或复杂迭代的依赖，为动态过程的瞬态波前检测提供了高效且稳健的解决方案。</p>
+                        <h4>Focus Prediction and Uncertainty Modeling Empowered by Deep Learning</h4>
+                        <p>This research introduces an innovative deep learning framework that not only accurately predicts the focal position in defocused images but, more critically, quantifies the uncertainty of its predictions. By providing a confidence assessment for the model's output, this technology significantly enhances the reliability and robustness of automated optical inspection and imaging systems, addressing the challenge of evaluating result dependability in complex or low signal-to-noise ratio scenarios.</p>
                     </div>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-image">
-                        <img src="https://opg.optica.org/getimagev2.cfm?img=SsHl1RyvvdSfAo8XAWOkaEP%2B2iViT5GJgAcEYKl5OiQ%3D&uri=oe-31-17-27973-g007" alt="光学涡旋用于散斑干涉测量">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0143816622003347-gr14.jpg" alt="Bayesian Neural Network for Wavefront Reconstruction">
                     </div>
                     <div class="highlight-text">
-                        <h4>光学涡旋剪切散斑干涉测量新方法</h4>
-                        <p>本工作开创性地将光学涡旋（Optical Vortices）引入数字剪切散斑干涉测量技术（DSSPI）中。通过利用光学涡旋光束独特的螺旋形相位结构和中心相位奇点，实现了一种新型的、高灵敏度的线性剪切量测量方法。这项技术为微小形变、应变场及材料无损检测等领域提供了一种全新的、具有更高精度潜力的光学计量工具。</p>
+                        <h4>Single-Frame Interferometric Wavefront Reconstruction via Bayesian Neural Networks</h4>
+                        <p>This study leverages Bayesian Convolutional Neural Networks (BNN) to achieve high-precision, reliable reconstruction of complex wavefronts from a single-frame lateral shearing interferogram. This approach combines the powerful fitting capabilities of deep learning with the probabilistic reasoning of Bayesian theory, effectively overcoming the reliance of traditional methods on multi-frame data or complex iterations and offering a robust, efficient solution for transient wavefront sensing in dynamic processes.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-image">
+                        <img src="https://opg.optica.org/getimagev2.cfm?img=SsHl1RyvvdSfAo8XAWOkaEP%2B2iViT5GJgAcEYKl5OiQ%3D&uri=oe-31-17-27973-g007" alt="Optical Vortices for Speckle Interferometry">
+                    </div>
+                    <div class="highlight-text">
+                        <h4>A Novel Method for Shearing Speckle Interferometry Using Optical Vortices</h4>
+                        <p>This work pioneerly integrates Optical Vortices into Digital Shearing Speckle Pattern Interferometry (DSSPI). By leveraging the unique helical phase structure and central phase singularity of optical vortex beams, a novel and highly sensitive method for measuring linear shear is realized. This technique provides a new paradigm with potential for higher precision in fields such as micro-deformation analysis, strain field measurement, and non-destructive testing.</p>
                     </div>
                 </div>
             </section>
-
-            <section id="publications" class="publications">
-                <h2><span class="icon">📚</span>代表性学术论著<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
-                <ol>
-                    <li><strong>Xin Tang*</strong>, Xinli Zheng, Jie Chen, et al. Modeling Uncertainty in Deep Learning for Focus Prediction of Defocused Images. <span class="journal-info">Journal of Lightwave Technology, 2025. (JCR Q1, 中科院一区 SCI)</span></li>
-                    <li>Yi Hou, Zhisong Li, <strong>Xin Tang*</strong>. Absolute detection method based on multi-signal phase extraction and separation. <span class="journal-info">Optics and Lasers in Engineering, 2025. (JCR Q1, 中科院二区 SCI)</span></li>
-                    <li>Fengyi Zhang, Zhisong Li, <strong>Xin Tang*</strong>. Interferometric image reorganization and screening method based on phase-shift convergence criterion. <span class="journal-info">Optics and Lasers in Engineering, 2025. (JCR Q1, 中科院二区 SCI)</span></li>
-                    <li><strong>Xin Tang</strong>, Jingfeng Zhu, Ping Zhong*, et al. Reliable wavefront reconstruction from a single lateral shearing interferogram using Bayesian convolutional neural network. <span class="journal-info">Optics and Lasers in Engineering, 2023. (JCR Q1, 中科院二区 SCI)</span></li>
-                    <li><strong>Xin Tang</strong>, Ping Zhong*, et al. Measurement of linear shear through optical vortices in digital shearing speckle pattern interferometry. <span class="journal-info">Optics Express, 2023. (JCR Q2, 中科院二区 SCI TOP)</span></li>
-                    <li>钟平, <strong>汤信</strong>, 李志松, 等. 一种数字散斑干涉系统光阑狭缝尺寸的选取方式. 2021.07.27, CN110500965B. (发明专利)</li>
-                    <li>张玲玲, <strong>汤信</strong>, 钟平, 等. 一种激光深熔焊缺陷的在线检测方法及检测装置. 2020.12.04, CN112025090A. (发明专利)</li>
-                </ol>
-            </section>
-
-            <section id="awards">
-                <h2><span class="icon">🏆</span>荣誉奖项<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
-                <div class="section-item">
-                    <div class="item-header"><span class="item-title">个人荣誉</span></div>
-                     <ul class="skills-list" style="list-style: none;">
-                        <li><strong>2025年:</strong> 上海工程技术大学电子电气工程学院创新创业中心导师</li>
-                        <li><strong>2024年:</strong> 上海市优秀毕业生</li>
-                        <li><strong>2024年:</strong> 上海市科技进步奖二等奖 (10/10，证书号:20234096-2-R10)</li>
-                    </ul>
-                </div>
-                 <div class="section-item">
-                    <div class="item-header"><span class="item-title">指导学生竞赛</span></div>
-                    <ul class="skills-list" style="list-style: none;">
-                        <li><strong>2024年:</strong> 中国国际大学生创新大赛 (上海赛区) - 铜奖</li>
-                        <li><strong>2024年:</strong> 上海工程技术大学大学生创新大赛 - 一等奖</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section id="expertise">
-                <h2><span class="icon">🌟</span>核心专长<a href="#top" class="back-to-top" title="返回顶部">&#8593;</a></h2>
-                <div class="section-item">
-                     <h4>研究方向</h4>
-                     <div class="keywords-container">
-                         <span class="keyword">光电精密检测</span>
-                         <span class="keyword">计算成像</span>
-                         <span class="keyword">干涉/散斑计量</span>
-                         <span class="keyword">半导体工艺检测</span>
-                         <span class="keyword">机器视觉</span>
-                         <span class="keyword">AI赋能的光学测量</span>
-                     </div>
-                </div>
-                 <div class="section-item">
-                     <h4>总结</h4>
-                     <ul class="skills-list">
-                        <li><strong>科研创新与学术贡献:</strong> 长期深耕光电检测与图像处理领域，以第一作者/通讯作者发表高水平SCI论文10篇 (含中科院一区)，获授权发明专利5项。主持并承担国家级、省部级及企业横向课题10余项，具备独立开拓新研究方向与组建科研团队的能力，多次在国际学术会议作英文口头报告。</li>
-                        <li><strong>专业领域与技术专长:</strong> 兼具扎实的理论功底与丰富的工程实践经验。精通C++/Python/Matlab等语言进行复杂算法的开发与项目管理；擅长运用Zemax等工具进行精密光学系统的设计、仿真与分析。在光学成像、光路系统搭建与性能评估方面拥有全流程开发设计经验。</li>
-                        <li><strong>教学育人与团队指导:</strong> 长期深度参与人才培养环节，指导硕士研究生及本科生完成学术研究、毕业设计及创新竞赛。熟悉高校教学、科研及管理工作流程，具备丰富的项目申报与科技写作经验，致力于将前沿科研成果转化为优质教学内容，推动产学研深度融合。</li>
-                     </ul>
-                 </div>
-            </section>
-
         </main>
     </div>
 
 </body>
 </html>
-
-
-
-
-
