@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Tang - Homepage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .welcome-header {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            flex: 0 0 280px; /* Fixed width for the sidebar */
+        }
+
+        .sidebar img.profile-pic {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h1 {
+            font-size: 1.8em;
+            margin: 0 0 10px 0;
+            color: #111;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Right Main Content */
+        .main-content {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #0d47a1; /* Professional blue color */
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .main-content .section:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        .main-content p, .main-content ul {
+            text-align: justify;
+            font-size: 1.05em;
+        }
+
+        .main-content ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .main-content li {
+            margin-bottom: 10px;
+        }
+
+        /* Research Highlights Section */
+        .highlight-item {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .highlight-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .highlight-image {
+            flex: 0 0 300px;
+        }
+        .highlight-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .highlight-text h4 {
+            margin-top: 0;
+            color: #111;
+            font-size: 1.2em;
+        }
+        .highlight-text p {
+            font-size: 1em;
+            color: #444;
+        }
+        
+        /* New Style for the placeholder text */
+        .update-placeholder {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            padding: 20px 0;
+            font-size: 1.1em;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex: 0 0 auto; /* Reset flex property */
+                text-align: center;
+            }
+            .sidebar img.profile-pic {
+                max-width: 250px;
+            }
+            .highlight-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .highlight-image {
+                 max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="welcome-header">Welcome to Xin Tang's Homepage!</h1>
+
+        <div class="main-layout">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <img src="profilephoto.jpg" alt="Xin Tang" class="profile-pic">
+                <div class="contact-info">
+                    <h1>Xin Tang</h1>
+                    <p>School of Electrical and Electronic Engineering</p>
+                    <p>Shanghai University of Engineering Science</p>
+                    <p>333 Longteng Road, Songjiang, Shanghai 201620, China</p>
+                    <p><strong>Email:</strong> <a href="mailto:tangxin@sues.edu.cn">tangxin@sues.edu.cn</a></p>
+                    <p><strong>Phone:</strong> +86 18521511477</p>
+                    <!-- You can add your ORCID and other links here -->
+                    <!-- 
+                    <p><strong>ORCID:</strong> <a href="#" target="_blank">0000-0000-0000-0000</a></p>
+                    <p><strong>Google Scholar:</strong> <a href="#" target="_blank">Link</a></p>
+                    -->
+                </div>
+            </aside>
+
+            <!-- Right Main Content -->
+            <main class="main-content">
+                <section class="section" id="biography">
+                    <h2 class="section-title">Brief Biography</h2>
+                    <p>
+                        Dr. Xin Tang received his Ph.D. degree in Control Science and Engineering from Donghua University. He joined Shanghai University of Engineering Science in June 2024 as a lecturer. He has presided over a youth project from the Shanghai Natural Science Foundation and several enterprise-commissioned projects, in addition to participating in numerous national and provincial-level research grants. As the first or corresponding author, he has published over 10 SCI-indexed papers, received a Second Prize for the Shanghai Science and Technology Progress Award, and holds two authorized invention patents. Our research group always welcomes students passionate about precision instrument R&D, hardware control, and C++ programming to apply for our Master's program.
+                    </p>
+                </section>
+
+                <section class="section" id="research-interests">
+                    <h2 class="section-title">Research Interests</h2>
+                    <ul>
+                        <li>Interferometric Metrology</li>
+                        <li>Optical Ultra-Precision Measurement</li>
+                        <li>Digital Image Processing</li>
+                        <li>Semiconductor Front-End Process Metrology Equipment</li>
+                        <li>Advanced Optical Characterization & Interfacial Physicochemistry</li>
+                        <li>Advanced Spectroscopic Ellipsometry in Functional Materials</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="research-highlights">
+                    <h2 class="section-title">Research Highlights</h2>
+                    <div class="highlight-item">
+                        <div class="highlight-image">
+                            <img src="fig1.png" alt="Focus Prediction and Uncertainty Modeling with Deep Learning">
+                        </div>
+                        <div class="highlight-text">
+                            <h4>Focus Prediction and Uncertainty Modeling Empowered by Deep Learning</h4>
+                            <p>This research introduces an innovative deep learning framework that not only accurately predicts the focal position in defocused images but, more critically, quantifies the uncertainty of its predictions. This enhances the reliability and robustness of automated optical inspection and imaging systems.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-image">
+                            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0143816622003347-gr14.jpg" alt="Bayesian Neural Network for Wavefront Reconstruction">
+                        </div>
+                        <div class="highlight-text">
+                            <h4>Single-Frame Interferometric Wavefront Reconstruction via Bayesian Neural Networks</h4>
+                            <p>This study leverages Bayesian Convolutional Neural Networks (BNN) to achieve high-precision, reliable reconstruction of complex wavefronts from a single-frame lateral shearing interferogram, offering a robust solution for transient wavefront sensing in dynamic processes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Placeholder for future content -->
+                    <p class="update-placeholder">More coming soon...</p>
+
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
